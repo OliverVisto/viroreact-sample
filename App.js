@@ -30,7 +30,8 @@ var sharedProps = {
 }
 
 // Sets the default scene you want for AR and VR
-var InitialARScene = require('./js/HelloWorldSceneAR');
+var FirstLocation = require('./js/FirstLocation');
+var SecondLocation = require('./js/SecondLocation');
 
 
 var UNSET = "UNSET";
@@ -91,7 +92,7 @@ export default class ViroSample extends Component {
   _getARNavigator() {
     return (
       <ViroARSceneNavigator {...this.state.sharedProps}
-        initialScene={{scene: InitialARScene}} />
+        initialScene={{scene: FirstLocation, SecondLocation}} />
     );
   }
   
